@@ -1,0 +1,24 @@
+<div class="simple-layout">
+  <h1>Buddy - how can I help?</h1>
+
+<!-- <form action="/answer" method="get">
+  <input type="text" name="query" placeholder="Type in answer?">
+  <input type="submit">
+</form>
+-->
+
+<%= params[:query].capitalize %>
+
+<br>
+<br>
+<% if params[:query][-1] == "?" %>
+<%= ["This is a stupid question", "What do you want from me", "Just get your ass off the couch", "I don't have time for you"].sample %>
+<% else %>
+<%= ["Give me a break", "I have other clients too", "Sorry don't have time rn", "Ask Lusha!"].sample  %>
+<% end %>
+
+<br>
+<br>
+<%= link_to "Ask a new question", "/ask" %>
+
+</div>
